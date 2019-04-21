@@ -1,0 +1,871 @@
+@charset "UTF-8";
+html {
+	overflow-y: scroll; /* IEへの対応 http://www.htmq.com/style/overflow-y.shtml */
+	/*Internet Explorerが独自に追加したプロパティ*/
+	/*画面に収まりきれなかったときにスクロールして表示することを許可するか否か*/
+}
+/* リセットおまじない--------------------------------- */
+body, h1, h2, h3, h4, h5, p, ul, ol, li, dl, dt, dd {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	background: #fff;
+	text-align: center;
+	font-size: 15px;
+	line-height: 2;
+	min-width: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-family: "Noto Sans Japanese", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, "メイリオ", "Meiryo", "HGPｺﾞｼｯｸM", "Osaka", "ＭＳ Ｐゴシック", sans-serif, Century Gothic, Arial;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+li {
+	list-style: none;
+}
+a {
+    color: #3583aa;
+	outline: none;
+	color: inherit;
+	text-decoration: none;
+}
+img {
+	border: 0px;
+	vertical-align: bottom;
+}
+/* --------------------------------------------------- */
+
+
+/* base.tplの記述 */
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+a:visited {
+    color: #788d98;    
+}
+/*リンク文字の下線をマウスが乗ったときだけ現れる*/
+a:hover {
+    text-decoration: underline;
+}
+
+#header-t{
+    margin: 0 auto!important;
+    height: 36px;
+}
+
+header {
+    widows: 960px;
+    height: 250px;
+    margin: 0 auto;
+}
+
+header img{
+	width: 100%;
+}
+
+.obi {
+	background-size:auto;
+}
+
+.logo {
+    float: left;
+    margin: 80px;
+}
+
+.global-nav {
+    float: right;
+    margin-top: 95px;
+}
+
+.global-nav li {
+    float: left;
+    margin: 0 20px;
+    font-size: 20px;
+    list-style: none;
+    font-family: 'Bitter', serif;
+}
+
+.global-nav li a {
+    color: #3583aa
+}
+
+.global-nav li a:hover {
+    border-bottom: 2px solid #3583aa;
+    padding-bottom: 3px;
+    text-decoration: none;    
+}
+
+#wrap {
+    clear: both;
+}
+
+.content {
+    width: 960px;
+    margin: 0 auto;
+}
+
+#footer-f{
+    padding: 0;
+}
+
+footer {
+    text-align: center;
+    color: #3583aa;
+    padding: 116px 0;
+}
+
+footer small {
+    font-size: 12px;
+}
+
+footer img {
+    width: 100%;
+    margin-top: 0%;
+}
+
+#index h1 {
+    font-size: 100px;
+    line-height: 1;
+    color: #ffffff;
+    font-family: 'Bitter' ,serif;
+    margin-bottom: 50px;
+}
+
+#index .content {
+    margin-top: 10px;
+}
+
+#index p {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.btn a {
+    background-color: #009cd3;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Bitter', serif;
+    width: 185px;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 20px;
+    border-radius: 5px; /*ボタンの角を丸くした*/
+    border: 3px solid #009cd3;
+}
+
+.btn a:hover {
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #009cd3;
+}
+
+#index footer {
+    width: 960px;
+    margin: 150px auto 0 auto;
+    text-align: left;    
+}
+/* base.tplの記述。ここまで */
+
+
+/* 新規登録ページ（register.tpl） */
+.contents img {
+    padding: 1px 0;
+    margin-top: 9px;
+    margin-bottom: 9px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#touroku p {
+    text-align: center;
+    padding: 0;
+    margin-top: 3px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#touroku {
+    background-color: #fff;
+}
+
+#touroku  .form dl {
+    margin-left: 150px;
+}
+
+#touroku  .form dl dt {
+    font-family:"MS 明朝", serif; 
+    width: 165px;
+    margin-top: 30px;
+    margin-left: 180px;
+    float: left;
+    clear: both;
+}
+
+#touroku  .form dl dd {
+    margin-right: 200px;
+    margin-left: 100px;
+    padding: 25px 0;
+}
+
+#touroku  .form .name {
+    border: solid 1px #6091d3;
+    width: 500px;
+    height: 30px;
+}
+
+#touroku  .form .email {
+    border: solid 1px #6091d3;
+    width: 500px;
+    height: 30px;    
+}
+
+#touroku  .form .tel {
+    border: solid 1px #6091d3;
+    width: 500px;
+    height: 30px;
+}
+
+#touroku  .form button {
+    background-color: #009cd3;
+    color: #ffffff;
+    font-size: 20px;
+    width: 400px;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 5px; /*ボタンの角を丸くした*/
+    border: 3px solid #009cd3;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+
+/* プルダウンメニュー（register.tpl）の記述 */
+.cp_ipselect {
+	overflow: hidden;
+	width: 90%;
+	margin: auto;
+	text-align: center;
+}
+
+.cp_ipselect select {
+	width: 100%;
+	padding-right: 1em;
+	cursor: pointer;
+	text-indent: 0.01px;
+	text-overflow: ellipsis;
+	border: none;
+	outline: none;
+	background: transparent;
+	background-image: none;
+	box-shadow: none;
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+.cp_ipselect select::-ms-expand {
+	display: none;
+}
+
+.cp_ipselect.cp_sl01 {
+	position: relative;
+	border: 1px solid #bbbbbb;
+	border-radius: 2px;
+	background: #ffffff;
+}
+
+.cp_ipselect.cp_sl01::before {
+	position: absolute;
+	top: 0.8em;
+	right: 0.9em;
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #666666;
+	pointer-events: none;
+}
+
+.cp_ipselect.cp_sl01 select {
+	padding: 8px 38px 8px 8px;
+	color: #666666;
+}
+/* プルダウンメニューここまで */
+/* 新規登録ページここまで */
+
+
+/* スライドショーの記述（index.tpl）*/
+@keyframes slide1 {
+	0% {opacity: 0;}
+	22% {opacity: 1;}
+	34% {opacity: 1;}
+	45% {opacity: 0;}
+	56% {opacity: 0;}
+	67% {opacity: 0;}
+	78% {opacity: 0;}
+	89% {opacity: 0;}
+	100% {opacity: 0;}
+}
+
+@keyframes slide2 {
+	0% {opacity: 0;}
+	22% {opacity: 0;}
+	34% {opacity: 1;}
+	45% {opacity: 1;}
+	56% {opacity: 0;}
+	67% {opacity: 0;}
+	78% {opacity: 0;}
+	89% {opacity: 0;}
+	100% {opacity: 0;}
+}
+
+@keyframes slide3 {
+	0% {opacity: 0;}
+	22% {opacity: 0;}
+	34% {opacity: 0;}
+	45% {opacity: 1;}
+	56% {opacity: 1;}
+	67% {opacity: 0;}
+	78% {opacity: 0;}
+	89% {opacity: 0;}
+	100% {opacity: 0;}
+}
+
+@keyframes slide4 {
+	0% {opacity: 0;}
+	22% {opacity: 0;}
+	34% {opacity: 0;}
+	45% {opacity: 0;}
+	56% {opacity: 1;}
+	67% {opacity: 1;}
+	78% {opacity: 0;}
+	89% {opacity: 0;}
+	100% {opacity: 0;}
+}
+
+@keyframes slide5 {
+	0% {opacity: 0;}
+	22% {opacity: 0;}
+	34% {opacity: 0;}
+	45% {opacity: 0;}
+	56% {opacity: 0;}
+	67% {opacity: 1;}
+	78% {opacity: 1;}
+	89% {opacity: 0;}
+	100% {opacity: 0;}
+}
+
+@keyframes slide6 {
+	0% {opacity: 0;}
+	22% {opacity: 0;}
+	34% {opacity: 0;}
+	45% {opacity: 0;}
+	56% {opacity: 0;}
+	67% {opacity: 0;}
+	78% {opacity: 1;}
+	89% {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+#mainimg {
+	clear: left;
+	width: 100%;
+	position: relative;
+}
+
+#slide1,#slide2,#slide3,#slide4,#slide5,#slide6 {
+    height:750px;
+	-webkit-animation-duration: 25s;	/*実行する時間。「s」は秒の事。*/
+	animation-duration: 25s;			/*同上*/
+	-webkit-animation-iteration-count:infinite;	/*実行する回数。「infinite」は無限に繰り返す意味。*/
+	animation-iteration-count:infinite;			/*同上*/
+}
+
+#slide1 {
+	-webkit-animation-name: slide1;		/*上で設定しているキーフレーム（keyframes）の名前*/
+	animation-name: slide1;				/*同上*/
+	position: relative;
+	width: 100%;
+}
+
+#slide2 {
+	-webkit-animation-name: slide2;		/*上で設定しているキーフレーム（keyframes）の名前*/
+	animation-name: slide2;				/*同上*/
+	position: absolute;
+	left:0px;
+	top:0px;
+	width: 100%;
+}
+
+#slide3 {
+	-webkit-animation-name: slide3;		/*上で設定しているキーフレーム（keyframes）の名前*/
+	animation-name: slide3;				/*同上*/
+	position: absolute;
+	left:0px;
+	top:0px;
+	width: 100%;
+}
+
+#slide4 {
+	-webkit-animation-name: slide4;		/*上で設定しているキーフレーム（keyframes）の名前*/
+	animation-name: slide4;				/*同上*/
+	position: absolute;
+	left:0px;
+	top:0px;
+	width: 100%;
+}
+
+#slide5 {
+	-webkit-animation-name: slide5;		/*上で設定しているキーフレーム（keyframes）の名前*/
+	animation-name: slide5;				/*同上*/
+	position: absolute;
+	left:0px;
+	top:0px;
+	width: 100%;
+}
+
+#slide6 {
+	-webkit-animation-name: slide6;		/*上で設定しているキーフレーム（keyframes）の名前*/
+	animation-name: slide6;				/*同上*/
+	position: absolute;
+	left:0px;
+	top:0px;
+	width: 100%;
+}
+/* スラードショー（index.tpl）の記述ここまで */
+
+
+/* ログイン画面（login.tpl）の記述 */
+[class*="fontawesome-"]:before {
+	font-family: 'FontAwesome', sans-serif;
+}
+
+#login input {
+	border: none;
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5em;
+	padding: 0;
+	-webkit-appearance: none;
+}
+
+after { clear: both; }
+  
+#login {
+	margin: 50px auto;
+	width: 320px;
+}
+  
+#login form {
+	margin: auto;
+	padding: 22px 22px 22px 22px;
+	width: 100%;
+	border-radius: 5px;
+	border-color:#3583aa;
+}
+  
+#login form span {
+	border-radius: 3px 0px 0px 3px;
+	border-right: 3px solid #434a52;
+	color: #606468;
+	display: block;
+	float: left;
+	line-height: 50px;
+	text-align: center;
+	width: 50px;
+	height: 50px;
+}
+  
+#login form input[type="text"] {
+    border-radius: 3px 3px 3px 3px;
+    border: solid 1px #6091d3;
+	color: black;
+	margin-bottom: 1em;
+	padding: 0 16px;
+	width: 235px;
+    height: 50px;
+}
+  
+#login form input[type="password"] {
+    border-radius: 3px 3px 3px 3px;
+    border: solid 1px #6091d3;
+	color: black;
+	margin-bottom: 1em;
+	padding: 0 16px;
+	width: 235px;
+    height: 50px;
+}
+  
+#login form input[type="submit"] {
+	background: #009cd3;
+	border: 0;
+	width: 270px;
+	height: 40px;
+	border-radius: 3px;
+	color: white;
+	cursor: pointer;
+}
+
+#login form input[type="submit"]:hover {
+	background: #ffffff;
+	color: #009cd3;
+}
+/* ログイン画面ここまで */
+
+
+/* 検索ページ（search.tpl）の記述*/
+.relative {
+    position: relative;
+    height:650px;
+}
+
+.calendar {
+    position: relative;
+    justify-content: space-between;
+    margin: 20px;
+    bottom: 450px;
+    display: inline-block;
+    padding: 0.25em 1em;
+    color: dimgray;
+    background-color: rgb(109, 229, 233);/*色*/
+    border: solid 1px #5491ad;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+    text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+    font-family: 'MS明朝', serif;
+    font-size: 30pt;
+    border-radius: 4px;
+    opacity: 0.80; /* 55％不透明度(＝45％透過) */
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+}
+
+.item {
+    block-size: 87px;
+    position: relative;
+    justify-content: space-between;
+    margin: 20px;
+    bottom: 450px;
+    display: inline-block;
+    padding: 0.25em 1em;
+    color: dimgray;
+    background-color: rgb(109, 229, 233);/*色*/
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+    text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+    font-family: 'MS明朝', serif;
+    font-size: 30pt;
+    border-radius: 4px;
+    opacity: 0.80; /* 55％不透明度(＝45％透過) */
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+}
+
+.result {
+    position: relative;
+    padding: 1em 3em;
+    margin: 50px;
+    bottom: 450px;
+    display: inline-block;
+    color:dimgray;
+    background:rgb(243, 228, 19);
+    border-radius: 4px;
+    /*背景色*/
+    /* border-top: solid 6px #1dc1d6; */
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 15pt;
+}
+
+.relative img{
+	width:100%!important;
+}
+
+.search_container{
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid #999;
+    padding: 3px 10px;
+    border-radius: 20px;
+    height: 2.3em;
+    width: 200px;
+    overflow: hidden;
+    margin: 90px 0 0 200px;
+}
+
+.search_container input[type="text"]{
+    border: none;
+    height: 2.0em;
+}
+
+.search_container input[type="text"]:focus {
+    outline: 0;
+}
+
+.search_container input[type="submit"]{
+    cursor: pointer;
+    font-family: FontAwesome;
+    font-size: 1.3em;
+    border: none;
+    background: none;
+    color: #3879D9;
+    position: absolute;
+    width: 2.5em;
+    height: 2.5em;
+    right: 0;
+    top: -10px;
+    outline : none;
+}
+/* 検索ページここまで */
+
+
+/* 美容室ページ（mypage.tpl/salon.tpl)の記述 */
+.my-picture p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+}
+
+
+.my-picture img {
+    width: 100%;
+    height: 550px;
+    margin: 10px auto;
+}
+
+.my-picture h1 {
+    text-align:left;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    margin-left: 130px;
+}
+
+.pic-center img {
+    width: 150px;
+    height: 150px;
+    float: left;
+    border-radius: 100px; 
+    margin-left: 180px;
+    margin-right: 30px;
+    margin-bottom: 25px;
+}
+
+.pic-center p {
+    text-align: left;
+    margin-top: 60px;
+    margin-bottom: 14px;
+    margin-right: 130px;
+    margin-left: 40px;
+    font-size: 20px;
+    font-family: 'MS明朝',serif; 
+    line-height: 1.8;
+    padding-bottom:70px; 
+}
+
+.map-add img {
+    width: 500px;
+    height: 400px;
+    float: right;
+    margin:40px 130px 0 0;
+    margin-bottom: 15px;
+}
+
+.map-add p {
+    text-align: left;
+    padding-top: 50px;
+    margin-top: 5px;
+    margin-left: 250px;
+    font-size: 20px;
+    font-family: 'MS明朝',serif;
+    line-height: 0.11;  
+}
+/* 美容室ページ（mypage.tpl/salon.tpl）ここまで */
+
+
+/* 検索結果ページ（result.tpl） */
+hr {
+    z-index: 2;
+    margin: 35px 0;
+    border-top: 1px solid skyblue;
+}
+
+.kekka{
+    font-family: 'MS明朝', serif;
+    font-size: 15px;
+    text-align: center;
+    padding: 0 500px;
+}
+
+.wrapper{
+    width: 100%;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-auto-rows: 1fr 2fr; 
+    align-items: stretch;
+    font-family: 'MS明朝', serif;
+    text-align: center;
+}
+.headline1{
+    color: grey;
+    margin-top: 13px;
+    font-size: 15px;
+}
+
+.headline2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    color: grey;
+}
+
+.headline3{
+    font-family:' MS ゴシック';;
+    font-size: 13px;
+}
+
+.headline4{
+    font-family:' MS ゴシック';
+    font-size: 13px;
+    margin-bottom: 40px;
+}
+
+.wrapper p{
+    text-align: left;
+    margin-left: 120px;
+    margin-bottom: 5px;
+}
+
+.wrapper img{
+    padding: 10px 10px;
+    width: 400px;
+    height: 350px;
+}
+/* 検索結果ページここまで */
+
+
+/* トップページのロゴを真ん中に表示 */
+.kitta-logo {
+    position: absolute;
+    top: 250px;
+    left: 40%;
+}
+/* トップロゴ記述ここまで */
+
+
+/* トップページ（index.tpl）の記述ここから */
+/* 最初のメッセージ表示 */
+#slidetop{
+    position: absolute;
+    z-index: 1000;
+    background-size: contain;
+    background-position: center;
+    background-color: #fff;
+    width: 100vw;
+    height: 100vh;
+}
+/* 最初のメッセージ表示ここまで */
+
+/* トップ画面の各画像のcss */
+.img1{
+    margin-top: 200px;
+}
+
+.img2{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.img2 p{
+    text-align: center;
+    font-family: 'MS明朝',serif;
+    color: #333333;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.setumei{
+    text-align: center;
+    font-family: 'MS明朝',serif;
+    color: #606468;
+    font-size: 19px;
+    margin-top: 40px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 100px;
+}
+
+.step1{
+    text-align: center;
+    display: inline-block;
+ }
+
+.step2{
+    text-align: center;
+    display: inline-block;
+}
+
+.step3{
+    text-align: center;
+    display: inline-block;
+
+}
+
+.kitta-logo2{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.start {
+    position: relative;
+    padding: 1em 3em;
+    margin: 50px 600px;
+    color: dimgray;
+    background:rgb(109, 229, 233);
+    border-radius: 4px;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15pt;
+}
+
+
+/* トップページ（index.tpl）ここまで */
+
+
+/* 登録完了画面（register_finish.tpl）ここから */
+.thanks{
+    background-color: #fff;
+    position: relative;
+    padding: 1em 3em;
+    margin: 50px;
+    bottom: 500px;
+    display: inline-block;
+    font-size: 30px;
+    font-family: 'MS明朝', serif;
+    opacity: 0.80; /* 55％不透明度(＝45％透過) */
+    border-radius: 4px;
+    color:dimgray;
+}
+
+.register-result {
+    position: relative;
+    padding: 1em 3em;
+    margin: 50px;
+    bottom: 500px;
+    display: inline-block;
+    color:dimgray;
+    background:rgb(243, 228, 19);
+    border-radius: 4px;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 15pt;
+}
+/* 登録完了画面（register_finish.tpl）ここまで */
